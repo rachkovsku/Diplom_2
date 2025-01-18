@@ -1,0 +1,72 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "name" : "categories",
+  "children" : [ {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : "1 expectation failed.\nExpected status code <500> but was <400>.\n",
+      "children" : [ {
+        "name" : "createOrderWithInvalidIngredientsHash",
+        "uid" : "fcb2de6b58a10249",
+        "parentUid" : "cf36ef845d6cdce17f3e00fe380ef30f",
+        "status" : "failed",
+        "time" : {
+          "start" : 1737184634644,
+          "stop" : 1737184637106,
+          "duration" : 2462
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "cf36ef845d6cdce17f3e00fe380ef30f"
+    }, {
+      "name" : "1 expectation failed.\nExpected status code <401> but was <200>.\n",
+      "children" : [ {
+        "name" : "createOrderWithNoAuthorization",
+        "uid" : "b31a088587344749",
+        "parentUid" : "5c5b8d4f37e62d5e06845d2a3a1b3b9e",
+        "status" : "failed",
+        "time" : {
+          "start" : 1737184637135,
+          "stop" : 1737184637245,
+          "duration" : 110
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "5c5b8d4f37e62d5e06845d2a3a1b3b9e"
+    }, {
+      "name" : "1 expectation failed.\nExpected status code <401> but was <400>.\n",
+      "children" : [ {
+        "name" : "createOrderWithNoAuthorizationAndIngredients",
+        "uid" : "837866c1b448bdbf",
+        "parentUid" : "c076f4451a6f215ee71b72106dae653c",
+        "status" : "failed",
+        "time" : {
+          "start" : 1737184638214,
+          "stop" : 1737184638315,
+          "duration" : 101
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "c076f4451a6f215ee71b72106dae653c"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  } ]
+}

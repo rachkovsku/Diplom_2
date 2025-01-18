@@ -1,0 +1,62 @@
+{
+  "uid" : "76b76ffb013adcbc",
+  "name" : "updateUserWithAuthorizationName",
+  "fullName" : "testApi.UserDataUpdateTest.updateUserWithAuthorizationName",
+  "historyId" : "93db788832b5c74110092eff2f08e5d7",
+  "time" : {
+    "start" : 1737184643010,
+    "stop" : 1737184643853,
+    "duration" : 843
+  },
+  "description" : "Изменение имени пользователя с авторизацией",
+  "descriptionHtml" : "<p>Изменение имени пользователя с авторизацией</p>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "testApi"
+  }, {
+    "name" : "testClass",
+    "value" : "testApi.UserDataUpdateTest"
+  }, {
+    "name" : "testMethod",
+    "value" : "updateUserWithAuthorizationName"
+  }, {
+    "name" : "suite",
+    "value" : "testApi.UserDataUpdateTest"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-GATO7BH"
+  }, {
+    "name" : "thread",
+    "value" : "16444@DESKTOP-GATO7BH.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "junit4"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "76b76ffb013adcbc.json",
+  "parameterValues" : [ ]
+}

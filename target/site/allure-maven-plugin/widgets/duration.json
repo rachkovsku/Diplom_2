@@ -1,0 +1,221 @@
+[ {
+  "uid" : "f887915b59bf0015",
+  "name" : "createUserWithoutRequiredFieldEmail",
+  "time" : {
+    "start" : 1737184642907,
+    "stop" : 1737184643007,
+    "duration" : 100
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "bd5dfc87d2d7a271",
+  "name" : "updateUserWithAuthorizationEmail",
+  "time" : {
+    "start" : 1737184644675,
+    "stop" : 1737184645528,
+    "duration" : 853
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "837866c1b448bdbf",
+  "name" : "createOrderWithNoAuthorizationAndIngredients",
+  "time" : {
+    "start" : 1737184638214,
+    "stop" : 1737184638315,
+    "duration" : 101
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "30cd6ca7ba6b2fd7",
+  "name" : "loginWithExistingUserTest",
+  "time" : {
+    "start" : 1737184650280,
+    "stop" : 1737184651152,
+    "duration" : 872
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "b635237af1612494",
+  "name" : "updateUserWithAuthorizationPassword",
+  "time" : {
+    "start" : 1737184647164,
+    "stop" : 1737184648027,
+    "duration" : 863
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "f8dbacbb89ec8ca",
+  "name" : "loginWithInvalidCredentials",
+  "time" : {
+    "start" : 1737184649539,
+    "stop" : 1737184650279,
+    "duration" : 740
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "af3762885c37ca99",
+  "name" : "creationUniqueUser",
+  "time" : {
+    "start" : 1737184642162,
+    "stop" : 1737184642906,
+    "duration" : 744
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "2ec155fbed94bbe5",
+  "name" : "createExistingUser",
+  "time" : {
+    "start" : 1737184641288,
+    "stop" : 1737184642055,
+    "duration" : 767
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "fcb2de6b58a10249",
+  "name" : "createOrderWithInvalidIngredientsHash",
+  "time" : {
+    "start" : 1737184634644,
+    "stop" : 1737184637106,
+    "duration" : 2462
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "a4565c3c1dac9ecb",
+  "name" : "updateUserWithoutAuthorizationName",
+  "time" : {
+    "start" : 1737184645529,
+    "stop" : 1737184646334,
+    "duration" : 805
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "76b76ffb013adcbc",
+  "name" : "updateUserWithAuthorizationName",
+  "time" : {
+    "start" : 1737184643010,
+    "stop" : 1737184643853,
+    "duration" : 843
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "48c0e9d84038469d",
+  "name" : "updateUserWithAuthorizationAllFields",
+  "time" : {
+    "start" : 1737184643854,
+    "stop" : 1737184644674,
+    "duration" : 820
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "434a9f3b8c57018b",
+  "name" : "updateUserWithoutAuthorizationAllData",
+  "time" : {
+    "start" : 1737184648029,
+    "stop" : 1737184648787,
+    "duration" : 758
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "77ff812d93bacb25",
+  "name" : "createOrderAndGetUserOrdersWithoutAuthorization",
+  "time" : {
+    "start" : 1737184654434,
+    "stop" : 1737184654533,
+    "duration" : 99
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "70da0d30858feaa6",
+  "name" : "createOrderWithAuthorizationAndNoIngredients",
+  "time" : {
+    "start" : 1737184637247,
+    "stop" : 1737184638213,
+    "duration" : 966
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "a8e9a23be43b6fc6",
+  "name" : "updateUserWithoutAuthorizationEmail",
+  "time" : {
+    "start" : 1737184648787,
+    "stop" : 1737184649537,
+    "duration" : 750
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "d763f388279820bd",
+  "name" : "createOrderWithAuthorization",
+  "time" : {
+    "start" : 1737184638317,
+    "stop" : 1737184641177,
+    "duration" : 2860
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "b31a088587344749",
+  "name" : "createOrderWithNoAuthorization",
+  "time" : {
+    "start" : 1737184637135,
+    "stop" : 1737184637245,
+    "duration" : 110
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "8921e8f8e7d4f79c",
+  "name" : "updateUserWithoutAuthorizationPassword",
+  "time" : {
+    "start" : 1737184646339,
+    "stop" : 1737184647163,
+    "duration" : 824
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "15fdabe09323378",
+  "name" : "createUserWithoutRequiredFieldName",
+  "time" : {
+    "start" : 1737184642056,
+    "stop" : 1737184642161,
+    "duration" : 105
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "4ce714a39650a041",
+  "name" : "getUserOrdersWithAuthorization",
+  "time" : {
+    "start" : 1737184651155,
+    "stop" : 1737184654432,
+    "duration" : 3277
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "34ed3eec9a41cf5",
+  "name" : "createUserWithoutRequiredFieldPassword",
+  "time" : {
+    "start" : 1737184641181,
+    "stop" : 1737184641287,
+    "duration" : 106
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]

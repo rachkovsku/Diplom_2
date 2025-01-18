@@ -1,0 +1,6 @@
+testApi\OrderCreationTest.class
+testApi\UserDataUpdateTest.class
+testApi\UserLoginTest.class
+testApi\UserOrdersTest.class
+testApi\UserCreationTest.class
+testApi\UserCreationMethods.class
