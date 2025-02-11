@@ -1,4 +1,4 @@
-package testApi;
+package edu.methods;
 
 import io.qameta.allure.Step;
 import io.restassured.RestAssured;
@@ -180,7 +180,7 @@ public class UserCreationMethods {
 
 
     @Step("Логин под существующим пользователем")
-    public Response loginWithUser(String email, String password, String name ) {
+    public Response loginWithUser (String email, String password, String name ) {
         System.out.println("Логин с данными - email: " + email + ", password: " + password + ", name: " + name);
         String body = String.format(
                 "{\n" +
@@ -295,7 +295,7 @@ public class UserCreationMethods {
                 .header("Authorization", accessToken)
                 .body(requestBody)
                 .when()
-                .patch("/api/auth/user");
+                .patch("/api/password-reset");
     }
 
     @Step ("Логирование данных запроса обновления password пользователя с авторизацией")

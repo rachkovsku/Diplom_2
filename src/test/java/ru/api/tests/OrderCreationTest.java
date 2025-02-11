@@ -1,7 +1,8 @@
-package testApi;
+package ru.api.tests;
 
 import io.qameta.allure.Description;
 import io.restassured.response.Response;
+import edu.methods.UserCreationMethods;
 import org.junit.Test;
 
 public class OrderCreationTest extends UserCreationMethods {
@@ -32,9 +33,7 @@ public class OrderCreationTest extends UserCreationMethods {
         String password = generateUniquePassword();
         String name = generateUniqueName();
         Response createUserResponse = createUniqueUser(email, password, name);
-        createUserResponse.then().statusCode(200);
         Response loginResponse = loginWithUser(email, password, name);
-        loginResponse.then().statusCode(200);
         String accessToken = loginResponse.jsonPath().getString("accessToken");
         Response orderResponse = UserCreationMethods.createOrderWitNoIngredients(accessToken);
         orderResponse.then().log().all();

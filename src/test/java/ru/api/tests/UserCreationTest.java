@@ -1,8 +1,13 @@
-package testApi;
+package ru.api.tests;
 
 import io.qameta.allure.Description;
 import io.restassured.response.Response;
+import edu.methods.UserCreationMethods;
 import org.junit.Test;
+
+import static io.restassured.RestAssured.given;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.is;
 
 public class UserCreationTest extends UserCreationMethods {
 
@@ -32,6 +37,13 @@ public class UserCreationTest extends UserCreationMethods {
 
         Response secondResponse = userActions.createUniqueUser(email, password, name);
         userActions.verifyDuplicateUserError(secondResponse);
+
+        Response deleteResponse = given()
+                .header("Authorization", "accessToken")
+                .when()
+                .delete("/api/auth/user");
+        System.out.println("Delete Response Code: " + deleteResponse.getStatusCode());
+        assertThat(deleteResponse.getStatusCode(), is(202));
     }
 
     @Test

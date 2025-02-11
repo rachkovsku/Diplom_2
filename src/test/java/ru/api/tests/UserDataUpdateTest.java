@@ -1,7 +1,8 @@
-package testApi;
+package ru.api.tests;
 
 import io.qameta.allure.Description;
 import io.restassured.response.Response;
+import edu.methods.UserCreationMethods;
 import org.junit.Test;
 
 public class UserDataUpdateTest extends UserCreationMethods {

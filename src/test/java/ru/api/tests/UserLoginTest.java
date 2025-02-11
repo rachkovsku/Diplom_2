@@ -1,7 +1,8 @@
-package testApi;
+package ru.api.tests;
 
 import io.qameta.allure.Description;
 import io.restassured.response.Response;
+import edu.methods.UserCreationMethods;
 import org.junit.Test;
 
 public class UserLoginTest extends UserCreationMethods {
@@ -37,4 +38,18 @@ public class UserLoginTest extends UserCreationMethods {
         deleteUserByToken(accessToken);
     }
 
+    @Test
+    @Description("Логин с неверным именем, пароль верный")
+    public void loginWithInvalidLogin() {
+        String email = generateUniqueEmail();
+        String password = generateUniquePassword();
+        String name = generateUniqueName();
+        Response createUserResponse = createUniqueUser(email, password, name);
+        verifyUserCreation(createUserResponse, email, name);
+        String accessToken = createUserResponse.jsonPath().getString("accessToken");
+        String invalidName = "invalid" + name;
+        Response loginResponse = methodsUserLogin.loginWithUser(email, password, invalidName);
+        UserCreationMethods.verifyLoginWithInvalidCredentials(loginResponse);
+        deleteUserByToken(accessToken);
+    }
 }

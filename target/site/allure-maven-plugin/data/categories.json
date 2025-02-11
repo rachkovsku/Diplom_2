@@ -1,19 +1,18 @@
 {
   "uid" : "4b4757e66a1912dae1a509f688f20b0f",
-  "name" : "categories",
   "children" : [ {
     "name" : "Product defects",
     "children" : [ {
       "name" : "1 expectation failed.\nExpected status code <500> but was <400>.\n",
       "children" : [ {
         "name" : "createOrderWithInvalidIngredientsHash",
-        "uid" : "fcb2de6b58a10249",
+        "uid" : "2583974f18144a9f",
         "parentUid" : "cf36ef845d6cdce17f3e00fe380ef30f",
         "status" : "failed",
         "time" : {
-          "start" : 1737184634644,
-          "stop" : 1737184637106,
-          "duration" : 2462
+          "start" : 1739282381830,
+          "stop" : 1739282384148,
+          "duration" : 2318
         },
         "flaky" : false,
         "newFailed" : false,
@@ -28,13 +27,30 @@
       "name" : "1 expectation failed.\nExpected status code <401> but was <200>.\n",
       "children" : [ {
         "name" : "createOrderWithNoAuthorization",
-        "uid" : "b31a088587344749",
+        "uid" : "6644ab013bc33adb",
         "parentUid" : "5c5b8d4f37e62d5e06845d2a3a1b3b9e",
         "status" : "failed",
         "time" : {
-          "start" : 1737184637135,
-          "stop" : 1737184637245,
-          "duration" : 110
+          "start" : 1739282384179,
+          "stop" : 1739282384287,
+          "duration" : 108
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "loginWithInvalidLogin",
+        "uid" : "c4ecd68b048fa6a3",
+        "parentUid" : "5c5b8d4f37e62d5e06845d2a3a1b3b9e",
+        "status" : "failed",
+        "time" : {
+          "start" : 1739282396283,
+          "stop" : 1739282396636,
+          "duration" : 353
         },
         "flaky" : false,
         "newFailed" : false,
@@ -49,13 +65,13 @@
       "name" : "1 expectation failed.\nExpected status code <401> but was <400>.\n",
       "children" : [ {
         "name" : "createOrderWithNoAuthorizationAndIngredients",
-        "uid" : "837866c1b448bdbf",
+        "uid" : "c151c086d9865680",
         "parentUid" : "c076f4451a6f215ee71b72106dae653c",
         "status" : "failed",
         "time" : {
-          "start" : 1737184638214,
-          "stop" : 1737184638315,
-          "duration" : 101
+          "start" : 1739282385262,
+          "stop" : 1739282385367,
+          "duration" : 105
         },
         "flaky" : false,
         "newFailed" : false,
@@ -66,7 +82,50 @@
         "parameters" : [ ]
       } ],
       "uid" : "c076f4451a6f215ee71b72106dae653c"
+    }, {
+      "name" : "\nExpected: is <202>\n     but: was <401>",
+      "children" : [ {
+        "name" : "createExistingUser",
+        "uid" : "81f4825bf2a0e44f",
+        "parentUid" : "198b19156927b21bd1328b59373cf2bf",
+        "status" : "failed",
+        "time" : {
+          "start" : 1739282388249,
+          "stop" : 1739282389176,
+          "duration" : 927
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "198b19156927b21bd1328b59373cf2bf"
+    }, {
+      "name" : "1 expectation failed.\nExpected status code <200> but was <404>.\n",
+      "children" : [ {
+        "name" : "updateUserWithAuthorizationPassword",
+        "uid" : "b00d806f01f518a5",
+        "parentUid" : "49e8c4ba724989b1644f4c577d398c8b",
+        "status" : "failed",
+        "time" : {
+          "start" : 1739282394301,
+          "stop" : 1739282394643,
+          "duration" : 342
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "49e8c4ba724989b1644f4c577d398c8b"
     } ],
     "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
-  } ]
+  } ],
+  "name" : "categories"
 }

@@ -1,8 +1,8 @@
 {
   "total" : 5,
   "items" : [ {
-    "uid" : "4447522131e118d1aaa33b57d19e6bd1",
-    "name" : "testApi.OrderCreationTest",
+    "uid" : "98bca28980e9b1fcf3c2b8fc1d090ee8",
+    "name" : "ru.api.tests.OrderCreationTest",
     "statistic" : {
       "failed" : 3,
       "broken" : 0,
@@ -12,41 +12,41 @@
       "total" : 5
     }
   }, {
-    "uid" : "79a71ad43c358ae46ed0ae5057f719b8",
-    "name" : "testApi.UserDataUpdateTest",
+    "uid" : "70471e1420f1bc0c65d12ca3f5eaf273",
+    "name" : "ru.api.tests.UserDataUpdateTest",
     "statistic" : {
-      "failed" : 0,
+      "failed" : 1,
       "broken" : 0,
       "skipped" : 0,
-      "passed" : 8,
+      "passed" : 7,
       "unknown" : 0,
       "total" : 8
     }
   }, {
-    "uid" : "a501bc9bc4b4e8a52b077109eda1f5ae",
-    "name" : "testApi.UserCreationTest",
+    "uid" : "6bff7fd6d01be9df06e57be69fab26e6",
+    "name" : "ru.api.tests.UserCreationTest",
     "statistic" : {
-      "failed" : 0,
+      "failed" : 1,
       "broken" : 0,
       "skipped" : 0,
-      "passed" : 5,
+      "passed" : 4,
       "unknown" : 0,
       "total" : 5
     }
   }, {
-    "uid" : "62f4730519d907807e78ef695c3640fc",
-    "name" : "testApi.UserLoginTest",
+    "uid" : "64106435edde391ba1a056c833cd48a8",
+    "name" : "ru.api.tests.UserLoginTest",
     "statistic" : {
-      "failed" : 0,
+      "failed" : 1,
       "broken" : 0,
       "skipped" : 0,
       "passed" : 2,
       "unknown" : 0,
-      "total" : 2
+      "total" : 3
     }
   }, {
-    "uid" : "b1144f7c6a50726ba6c48aaa1e50bc58",
-    "name" : "testApi.UserOrdersTest",
+    "uid" : "c689df419864e67e01536f4a69605231",
+    "name" : "ru.api.tests.UserOrdersTest",
     "statistic" : {
       "failed" : 0,
       "broken" : 0,

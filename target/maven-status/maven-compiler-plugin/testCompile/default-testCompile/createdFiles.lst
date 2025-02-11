@@ -1,6 +1,7 @@
-testApi\OrderCreationTest.class
-testApi\UserDataUpdateTest.class
-testApi\UserLoginTest.class
-testApi\UserOrdersTest.class
-testApi\UserCreationTest.class
-testApi\UserCreationMethods.class
+edu\methods\UserCreationMethods.class
+ru\api\tests\UserCreationTest.class
+ru\api\tests\UserLoginTest.class
+ru\api\tests\UserOrdersTest.class
+ru\api\tests\UserDataUpdateTest.class
+Body.class
+ru\api\tests\OrderCreationTest.class
