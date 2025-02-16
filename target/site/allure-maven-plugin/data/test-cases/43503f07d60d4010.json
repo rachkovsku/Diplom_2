@@ -1,0 +1,62 @@
+{
+  "uid" : "43503f07d60d4010",
+  "name" : "updateUserWithoutAuthorizationEmail",
+  "fullName" : "ru.api.tests.UserDataUpdateTest.updateUserWithoutAuthorizationEmail",
+  "historyId" : "985592c7c8f346bf1ea3d56d0ba5c4e4",
+  "time" : {
+    "start" : 1739729313117,
+    "stop" : 1739729313402,
+    "duration" : 285
+  },
+  "description" : "Изменение email пользователя без авторизации",
+  "descriptionHtml" : "<p>Изменение email пользователя без авторизации</p>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "ru.api.tests"
+  }, {
+    "name" : "testClass",
+    "value" : "ru.api.tests.UserDataUpdateTest"
+  }, {
+    "name" : "testMethod",
+    "value" : "updateUserWithoutAuthorizationEmail"
+  }, {
+    "name" : "suite",
+    "value" : "ru.api.tests.UserDataUpdateTest"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-GATO7BH"
+  }, {
+    "name" : "thread",
+    "value" : "11704@DESKTOP-GATO7BH.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "junit4"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "43503f07d60d4010.json",
+  "parameterValues" : [ ]
+}

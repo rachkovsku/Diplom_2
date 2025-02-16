@@ -1,13 +1,27 @@
 package ru.api.tests;
 
 import io.qameta.allure.Description;
+import io.restassured.RestAssured;
 import io.restassured.response.Response;
-import edu.methods.UserCreationMethods;
+import edu.methods.UserAndOrderMethods;
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
 
-public class OrderCreationTest extends UserCreationMethods {
+public class OrderCreationTest extends UserAndOrderMethods {
 
-    private UserCreationMethods methodsUserLogin = new UserCreationMethods();
+    private UserAndOrderMethods methodsUserLogin = new UserAndOrderMethods();
+    protected String accessToken;
+
+    @Before
+    public void setUp() {
+        RestAssured.baseURI = "https://stellarburgers.nomoreparties.site";
+    }
+
+    @After
+    public void tearDown() {
+            deleteUserByToken(accessToken);
+    }
 
     @Test
     @Description("Создание заказа с авторизацией и с ингредиентами")
@@ -20,10 +34,10 @@ public class OrderCreationTest extends UserCreationMethods {
         Response loginResponse = loginWithUser(email, password, name);
         loginResponse.then().statusCode(200);
         String accessToken = loginResponse.jsonPath().getString("accessToken");
-        Response orderResponse = UserCreationMethods.createOrderWithIngredients(accessToken);
+        Response orderResponse = UserAndOrderMethods.createOrderWithIngredients(accessToken);
         orderResponse.then().log().all();
-        UserCreationMethods.verifyOrderCreation(orderResponse);
-        deleteUserByToken(accessToken);
+        UserAndOrderMethods.verifyOrderCreation(orderResponse);
+
     }
 
     @Test
@@ -33,30 +47,33 @@ public class OrderCreationTest extends UserCreationMethods {
         String password = generateUniquePassword();
         String name = generateUniqueName();
         Response createUserResponse = createUniqueUser(email, password, name);
+        createUserResponse.then().statusCode(200);
         Response loginResponse = loginWithUser(email, password, name);
+        loginResponse.then().statusCode(200);
         String accessToken = loginResponse.jsonPath().getString("accessToken");
-        Response orderResponse = UserCreationMethods.createOrderWitNoIngredients(accessToken);
+        Response orderResponse = UserAndOrderMethods.createOrderWitNoIngredients(accessToken);
         orderResponse.then().log().all();
-        UserCreationMethods.verifyOrderCreationNoIngredients(orderResponse);
-        deleteUserByToken(accessToken);
+        UserAndOrderMethods.verifyOrderCreationNoIngredients(orderResponse);
+
+
     }
 
     @Test
     @Description("Создание заказа без авторизации, с ингредиентами")
     public void createOrderWithNoAuthorization() {
-        Response orderResponse = UserCreationMethods.createOrderWithoutAuthorization();
+        Response orderResponse = UserAndOrderMethods.createOrderWithoutAuthorization();
         orderResponse.then().log().all();
-        UserCreationMethods.verifyOrderCreationUnauthorized(orderResponse);
+        UserAndOrderMethods.verifyOrderCreationUnauthorized(orderResponse);
     }
 
     @Test
     @Description("Создание заказа без авторизации и без ингредиентов")
     public void createOrderWithNoAuthorizationAndIngredients() {
-        Response orderResponseWithoutAuthorization = UserCreationMethods.createOrderWithoutAuthorizationAndIngredients();
+        Response orderResponseWithoutAuthorization = UserAndOrderMethods.createOrderWithoutAuthorizationAndIngredients();
         orderResponseWithoutAuthorization.then().log().all();
-        UserCreationMethods.verifyOrderCreationNoIngredientsUnauthorized(orderResponseWithoutAuthorization);
-        Response orderResponseWithoutIngredients = UserCreationMethods.createOrderWithoutAuthorizationAndIngredients();
-        UserCreationMethods.verifyOrderCreationNoAuthorizedAndNoIngredients(orderResponseWithoutIngredients);
+        UserAndOrderMethods.verifyOrderCreationNoIngredientsUnauthorized(orderResponseWithoutAuthorization);
+        Response orderResponseWithoutIngredients = UserAndOrderMethods.createOrderWithoutAuthorizationAndIngredients();
+        UserAndOrderMethods.verifyOrderCreationNoAuthorizedAndNoIngredients(orderResponseWithoutIngredients);
     }
 
     @Test
@@ -71,14 +88,14 @@ public class OrderCreationTest extends UserCreationMethods {
         loginResponse.then().statusCode(200);
         String accessToken = loginResponse.jsonPath().getString("accessToken");
         try {
-            Response orderResponse = UserCreationMethods.createOrderWithInvalidIngredientsHash(accessToken);
+            Response orderResponse = UserAndOrderMethods.createOrderWithInvalidIngredientsHash(accessToken);
             orderResponse.then().log().all();
-            UserCreationMethods.verifyOrderCreationInvalidIngredientsHash(orderResponse);
-            orderResponse.then().statusCode(400);
+            UserAndOrderMethods.verifyOrderCreationInvalidIngredientsHash(orderResponse);
+            orderResponse.then().statusCode(500);
         } catch (Exception e) {
             System.out.println("Ошибка при создании заказа: " + e.getMessage());
-        } finally {
-            deleteUserByToken(accessToken);
         }
     }
+
+
 }

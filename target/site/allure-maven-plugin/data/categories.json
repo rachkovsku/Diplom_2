@@ -1,18 +1,19 @@
 {
   "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "name" : "categories",
   "children" : [ {
     "name" : "Product defects",
     "children" : [ {
       "name" : "1 expectation failed.\nExpected status code <500> but was <400>.\n",
       "children" : [ {
         "name" : "createOrderWithInvalidIngredientsHash",
-        "uid" : "2583974f18144a9f",
+        "uid" : "b9693f306e159929",
         "parentUid" : "cf36ef845d6cdce17f3e00fe380ef30f",
         "status" : "failed",
         "time" : {
-          "start" : 1739282381830,
-          "stop" : 1739282384148,
-          "duration" : 2318
+          "start" : 1739729305959,
+          "stop" : 1739729307779,
+          "duration" : 1820
         },
         "flaky" : false,
         "newFailed" : false,
@@ -24,54 +25,16 @@
       } ],
       "uid" : "cf36ef845d6cdce17f3e00fe380ef30f"
     }, {
-      "name" : "1 expectation failed.\nExpected status code <401> but was <200>.\n",
-      "children" : [ {
-        "name" : "createOrderWithNoAuthorization",
-        "uid" : "6644ab013bc33adb",
-        "parentUid" : "5c5b8d4f37e62d5e06845d2a3a1b3b9e",
-        "status" : "failed",
-        "time" : {
-          "start" : 1739282384179,
-          "stop" : 1739282384287,
-          "duration" : 108
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "newPassed" : false,
-        "newBroken" : false,
-        "retriesCount" : 0,
-        "retriesStatusChange" : false,
-        "parameters" : [ ]
-      }, {
-        "name" : "loginWithInvalidLogin",
-        "uid" : "c4ecd68b048fa6a3",
-        "parentUid" : "5c5b8d4f37e62d5e06845d2a3a1b3b9e",
-        "status" : "failed",
-        "time" : {
-          "start" : 1739282396283,
-          "stop" : 1739282396636,
-          "duration" : 353
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "newPassed" : false,
-        "newBroken" : false,
-        "retriesCount" : 0,
-        "retriesStatusChange" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "5c5b8d4f37e62d5e06845d2a3a1b3b9e"
-    }, {
       "name" : "1 expectation failed.\nExpected status code <401> but was <400>.\n",
       "children" : [ {
-        "name" : "createOrderWithNoAuthorizationAndIngredients",
-        "uid" : "c151c086d9865680",
+        "name" : "createOrderWithNoAuthorization",
+        "uid" : "e5f96959d44d775c",
         "parentUid" : "c076f4451a6f215ee71b72106dae653c",
         "status" : "failed",
         "time" : {
-          "start" : 1739282385262,
-          "stop" : 1739282385367,
-          "duration" : 105
+          "start" : 1739729307812,
+          "stop" : 1739729307924,
+          "duration" : 112
         },
         "flaky" : false,
         "newFailed" : false,
@@ -83,16 +46,16 @@
       } ],
       "uid" : "c076f4451a6f215ee71b72106dae653c"
     }, {
-      "name" : "\nExpected: is <202>\n     but: was <401>",
+      "name" : "1 expectation failed.\nExpected status code <401> but was <500>.\n",
       "children" : [ {
-        "name" : "createExistingUser",
-        "uid" : "81f4825bf2a0e44f",
-        "parentUid" : "198b19156927b21bd1328b59373cf2bf",
+        "name" : "createOrderWithNoAuthorizationAndIngredients",
+        "uid" : "f1da0e5de734509",
+        "parentUid" : "ee2f73125be815b17fa87177ab64ea00",
         "status" : "failed",
         "time" : {
-          "start" : 1739282388249,
-          "stop" : 1739282389176,
-          "duration" : 927
+          "start" : 1739729308430,
+          "stop" : 1739729308601,
+          "duration" : 171
         },
         "flaky" : false,
         "newFailed" : false,
@@ -102,18 +65,35 @@
         "retriesStatusChange" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "198b19156927b21bd1328b59373cf2bf"
+      "uid" : "ee2f73125be815b17fa87177ab64ea00"
     }, {
-      "name" : "1 expectation failed.\nExpected status code <200> but was <404>.\n",
+      "name" : "1 expectation failed.\nExpected status code <200> but was <400>.\n",
       "children" : [ {
-        "name" : "updateUserWithAuthorizationPassword",
-        "uid" : "b00d806f01f518a5",
-        "parentUid" : "49e8c4ba724989b1644f4c577d398c8b",
+        "name" : "createOrderWithAuthorization",
+        "uid" : "f9873ac1ea1f3a03",
+        "parentUid" : "3322b5d56ab2d43ffab4be5a2a03ee17",
         "status" : "failed",
         "time" : {
-          "start" : 1739282394301,
-          "stop" : 1739282394643,
-          "duration" : 342
+          "start" : 1739729308603,
+          "stop" : 1739729309078,
+          "duration" : 475
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "getUserOrdersWithAuthorization",
+        "uid" : "5d4412abdf3af303",
+        "parentUid" : "3322b5d56ab2d43ffab4be5a2a03ee17",
+        "status" : "failed",
+        "time" : {
+          "start" : 1739729314390,
+          "stop" : 1739729314827,
+          "duration" : 437
         },
         "flaky" : false,
         "newFailed" : false,
@@ -123,9 +103,50 @@
         "retriesStatusChange" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "49e8c4ba724989b1644f4c577d398c8b"
+      "uid" : "3322b5d56ab2d43ffab4be5a2a03ee17"
+    }, {
+      "name" : "1 expectation failed.\nJSON path user.email doesn't match.\nExpected: user28d821@yandex.ru\n  Actual: user736c7c@yandex.ru\n",
+      "children" : [ {
+        "name" : "updateUserWithAuthorizationAllFields",
+        "uid" : "c6f7b2ebe575d6d8",
+        "parentUid" : "bd99a1ff8893533f250678c7f3372b8e",
+        "status" : "failed",
+        "time" : {
+          "start" : 1739729310776,
+          "stop" : 1739729311101,
+          "duration" : 325
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "bd99a1ff8893533f250678c7f3372b8e"
+    }, {
+      "name" : "1 expectation failed.\nExpected status code <401> but was <200>.\n",
+      "children" : [ {
+        "name" : "loginWithInvalidLogin",
+        "uid" : "662bbeaa54253948",
+        "parentUid" : "5c5b8d4f37e62d5e06845d2a3a1b3b9e",
+        "status" : "failed",
+        "time" : {
+          "start" : 1739729313405,
+          "stop" : 1739729313758,
+          "duration" : 353
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "5c5b8d4f37e62d5e06845d2a3a1b3b9e"
     } ],
     "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
-  } ],
-  "name" : "categories"
+  } ]
 }

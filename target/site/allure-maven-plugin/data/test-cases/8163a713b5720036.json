@@ -1,0 +1,62 @@
+{
+  "uid" : "8163a713b5720036",
+  "name" : "loginWithInvalidCredentials",
+  "fullName" : "ru.api.tests.UserLoginTest.loginWithInvalidCredentials",
+  "historyId" : "d6812dbde525be2cf53c9230e259de0e",
+  "time" : {
+    "start" : 1739729313760,
+    "stop" : 1739729314034,
+    "duration" : 274
+  },
+  "description" : "Логин с верным именем, но неверным email и паролем",
+  "descriptionHtml" : "<p>Логин с верным именем, но неверным email и паролем</p>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "ru.api.tests"
+  }, {
+    "name" : "testClass",
+    "value" : "ru.api.tests.UserLoginTest"
+  }, {
+    "name" : "testMethod",
+    "value" : "loginWithInvalidCredentials"
+  }, {
+    "name" : "suite",
+    "value" : "ru.api.tests.UserLoginTest"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-GATO7BH"
+  }, {
+    "name" : "thread",
+    "value" : "11704@DESKTOP-GATO7BH.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "junit4"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "8163a713b5720036.json",
+  "parameterValues" : [ ]
+}

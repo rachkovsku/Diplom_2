@@ -1,7 +1,9 @@
-edu\methods\UserCreationMethods.class
+ru\api\tests\UserSerializationForNewData.class
+ru\api\tests\OrderSerialization.class
 ru\api\tests\UserCreationTest.class
 ru\api\tests\UserLoginTest.class
+ru\api\tests\UserSerialization.class
+edu\methods\UserAndOrderMethods.class
 ru\api\tests\UserOrdersTest.class
 ru\api\tests\UserDataUpdateTest.class
-Body.class
 ru\api\tests\OrderCreationTest.class

@@ -1,13 +1,27 @@
 package ru.api.tests;
 
 import io.qameta.allure.Description;
+import io.restassured.RestAssured;
 import io.restassured.response.Response;
-import edu.methods.UserCreationMethods;
+import edu.methods.UserAndOrderMethods;
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
 
-public class UserDataUpdateTest extends UserCreationMethods {
+public class UserDataUpdateTest extends UserAndOrderMethods {
 
-    private UserCreationMethods UserLoginMethods = new UserCreationMethods();
+    private UserAndOrderMethods UserLoginMethods = new UserAndOrderMethods();
+    protected String accessToken;
+
+    @Before
+    public void setUp() {
+        RestAssured.baseURI = "https://stellarburgers.nomoreparties.site";
+    }
+
+    @After
+    public void tearDown() {
+        deleteUserByToken(accessToken);
+    }
 
     @Test
     @Description("Изменение email пользователя с авторизацией")
@@ -19,12 +33,12 @@ public class UserDataUpdateTest extends UserCreationMethods {
         verifyUserCreation(createUserResponse, email, name);
         String accessToken = createUserResponse.jsonPath().getString("accessToken");
         String newEmail = generateUniqueEmail();
-        String requestBody = "{\"email\":\"" + newEmail + "\", \"name\":\"" + name + "\", \"password\":\"" + password + "\"}";
-        logRequest(accessToken, requestBody);
+        UserSerialization body = new UserSerialization(newEmail, name, password);
+        logRequest(accessToken, String.valueOf(body));
         Response updateResponse = updateUserEmail(accessToken, newEmail, password, name);
         logResponse(updateResponse);
         validateUpdateResponse(updateResponse, newEmail, name);
-        deleteUserByToken(accessToken);
+
     }
 
     @Test
@@ -37,12 +51,12 @@ public class UserDataUpdateTest extends UserCreationMethods {
         verifyUserCreation(createUserResponse, email, name);
         String accessToken = createUserResponse.jsonPath().getString("accessToken");
         String newName = generateUniqueName();
-        String requestBody = "{\"email\":\"" + email + "\", \"name\":\"" + newName + "\", \"password\":\"" + password + "\"}";
-        logRequestName(accessToken, requestBody);
+        UserSerialization body = new UserSerialization(newName, email, password);
+        logRequestName(accessToken, String.valueOf(body));
         Response updateResponse = updateUserName(accessToken, email, password, newName);
         logResponseName(updateResponse);
         validateUpdateNameResponse(updateResponse, newName, email);
-        deleteUserByToken(accessToken);
+
     }
 
     @Test
@@ -55,12 +69,12 @@ public class UserDataUpdateTest extends UserCreationMethods {
         verifyUserCreation(createUserResponse, email, name);
         String accessToken = createUserResponse.jsonPath().getString("accessToken");
         String newPassword = generateUniquePassword();
-        String requestBody = "{\"email\":\"" + email + "\", \"name\":\"" + name + "\", \"password\":\"" +newPassword + "\"}";
-        logRequestPassword(accessToken, requestBody);
+        UserSerialization body = new UserSerialization(name, email, newPassword);
+        logRequestPassword(accessToken, String.valueOf(body));
         Response updateResponse = updateUserPassword(accessToken, newPassword);
         logResponsePassword(updateResponse);
         validateUpdatePasswordResponse(updateResponse, newPassword);
-        deleteUserByToken(accessToken);
+
     }
 
     @Test
@@ -75,12 +89,12 @@ public class UserDataUpdateTest extends UserCreationMethods {
         String newEmail = generateUniqueEmail();
         String newPassword = generateUniquePassword();
         String newName = generateUniqueName();
-        String requestBody = "{\"email\":\"" + newEmail + "\", \"name\":\"" + newName + "\", \"password\":\"" + newPassword + "\"}";
-        logRequestAllFields(accessToken, requestBody);
+        UserSerializationForNewData body = new UserSerializationForNewData(newName, newEmail, newPassword);
+        logRequestAllFields(accessToken, String.valueOf(body));
         Response updateResponse = updateUserAllFields(accessToken, newEmail, newPassword, newName);
         logResponseAll(updateResponse);
         validateUpdateAllFieldsResponse(updateResponse, newEmail, newName);
-        deleteUserByToken(accessToken);
+
     }
 
     @Test
@@ -92,13 +106,13 @@ public class UserDataUpdateTest extends UserCreationMethods {
         Response createUserResponse = createUniqueUser(email, password, name);
         verifyUserCreation(createUserResponse, email, name);
         String newEmail = generateUniqueEmail();
-        String requestBody = "{\"email\":\"" + newEmail + "\", \"name\":\"" + name + "\", \"password\":\"" + password + "\"}";
-        logRequestWithoutAuth(requestBody);
+        UserSerialization body = new UserSerialization(name, newEmail, password);
+        logRequestWithoutAuth(String.valueOf(body));
         Response updateResponse = updateUserEmailWithoutAuth(newEmail, password, name);
         logResponse(updateResponse);
         validateUnauthorizedResponse(updateResponse);
-        String accessToken = createUserResponse.jsonPath().getString("accessToken");
-        deleteUserByToken(accessToken);
+
+
     }
 
     @Test
@@ -110,13 +124,13 @@ public class UserDataUpdateTest extends UserCreationMethods {
         Response createUserResponse = createUniqueUser(email, password, name);
         verifyUserCreation(createUserResponse, email, name);
         String newName = generateUniqueName();
-        String requestBody = "{\"email\":\"" + email + "\", \"name\":\"" + newName + "\", \"password\":\"" + password + "\"}";
-        logRequestWithoutAuthName(requestBody);
+        UserSerialization body = new UserSerialization(newName, email, password);
+        logRequestWithoutAuthName(String.valueOf(body));
         Response updateResponse = updateUserNameWithoutAuth(email, password, newName);
         logResponse(updateResponse);
         validateUnauthorizedResponse(updateResponse);
-        String accessToken = createUserResponse.jsonPath().getString("accessToken");
-        deleteUserByToken(accessToken);
+
+
     }
 
     @Test
@@ -128,8 +142,8 @@ public class UserDataUpdateTest extends UserCreationMethods {
         Response createUserResponse = createUniqueUser(email, password, name);
         verifyUserCreation(createUserResponse, email, name);
         String newPassword = generateUniquePassword();
-        String requestBody = "{\"email\":\"" + email + "\", \"name\":\"" + name + "\", \"password\":\"" + newPassword + "\"}";
-        logRequestWithoutAuthPassword(requestBody);
+        UserSerialization body = new UserSerialization(name, email, newPassword);
+        logRequestWithoutAuthPassword(String.valueOf(body));
         Response updateResponse = updateUserPasswordWithoutAuth(email, newPassword, name);
         logResponse(updateResponse);
         validateUnauthorizedResponse(updateResponse);
@@ -148,12 +162,12 @@ public class UserDataUpdateTest extends UserCreationMethods {
         String newEmail = generateUniqueEmail();
         String newPassword = generateUniquePassword();
         String newName = generateUniqueName();
-        String requestBody = "{\"email\":\"" + newEmail + "\", \"name\":\"" + newName + "\", \"password\":\"" + newPassword + "\"}";
-        logRequestWithoutAuthAll(requestBody);
+        UserSerializationForNewData body = new UserSerializationForNewData(newName, newEmail, newPassword);
+        logRequestWithoutAuthAll(String.valueOf(body));
         Response updateResponse = updateUserAllWithoutAuth(email, newPassword, name);
         logResponse(updateResponse);
         validateUnauthorizedResponse(updateResponse);
-        String accessToken = createUserResponse.jsonPath().getString("accessToken");
-        deleteUserByToken(accessToken);
+
+
     }
 }

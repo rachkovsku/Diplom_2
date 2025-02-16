@@ -9,12 +9,12 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "4f63f751322317d1",
+      "uid" : "a8f48c80e46a1ede",
       "status" : "passed",
       "time" : {
-        "start" : 1739282392681,
-        "stop" : 1739282393504,
-        "duration" : 823
+        "start" : 1739729311468,
+        "stop" : 1739729311766,
+        "duration" : 298
       }
     } ]
   },
@@ -28,13 +28,13 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "2583974f18144a9f",
+      "uid" : "b9693f306e159929",
       "status" : "failed",
       "statusDetails" : "1 expectation failed.\nExpected status code <500> but was <400>.\n",
       "time" : {
-        "start" : 1739282381830,
-        "stop" : 1739282384148,
-        "duration" : 2318
+        "start" : 1739729305959,
+        "stop" : 1739729307779,
+        "duration" : 1820
       }
     } ]
   },
@@ -48,12 +48,12 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "e5cbfc7cf38552bc",
+      "uid" : "43503f07d60d4010",
       "status" : "passed",
       "time" : {
-        "start" : 1739282395437,
-        "stop" : 1739282396279,
-        "duration" : 842
+        "start" : 1739729313117,
+        "stop" : 1739729313402,
+        "duration" : 285
       }
     } ]
   },
@@ -67,12 +67,12 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "87e3570ef74fb467",
+      "uid" : "4ff3c4c2e220834a",
       "status" : "passed",
       "time" : {
-        "start" : 1739282389178,
-        "stop" : 1739282389282,
-        "duration" : 104
+        "start" : 1739729309973,
+        "stop" : 1739729310086,
+        "duration" : 113
       }
     } ]
   },
@@ -86,13 +86,13 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "c151c086d9865680",
+      "uid" : "f1da0e5de734509",
       "status" : "failed",
-      "statusDetails" : "1 expectation failed.\nExpected status code <401> but was <400>.\n",
+      "statusDetails" : "1 expectation failed.\nExpected status code <401> but was <500>.\n",
       "time" : {
-        "start" : 1739282385262,
-        "stop" : 1739282385367,
-        "duration" : 105
+        "start" : 1739729308430,
+        "stop" : 1739729308601,
+        "duration" : 171
       }
     } ]
   },
@@ -106,31 +106,32 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "6e12c73c75bf9499",
+      "uid" : "ae5a938a27549db5",
       "status" : "passed",
       "time" : {
-        "start" : 1739282401426,
-        "stop" : 1739282401534,
-        "duration" : 108
+        "start" : 1739729314828,
+        "stop" : 1739729314937,
+        "duration" : 109
       }
     } ]
   },
   "e8f0f6e8bec008eca2a82a5e769002f1" : {
     "statistic" : {
-      "failed" : 0,
+      "failed" : 1,
       "broken" : 0,
       "skipped" : 0,
-      "passed" : 1,
+      "passed" : 0,
       "unknown" : 0,
       "total" : 1
     },
     "items" : [ {
-      "uid" : "25f38a1155040804",
-      "status" : "passed",
+      "uid" : "c6f7b2ebe575d6d8",
+      "status" : "failed",
+      "statusDetails" : "1 expectation failed.\nJSON path user.email doesn't match.\nExpected: user28d821@yandex.ru\n  Actual: user736c7c@yandex.ru\n",
       "time" : {
-        "start" : 1739282390924,
-        "stop" : 1739282391751,
-        "duration" : 827
+        "start" : 1739729310776,
+        "stop" : 1739729311101,
+        "duration" : 325
       }
     } ]
   },
@@ -144,31 +145,32 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "cfa5c2c16a6b02b5",
+      "uid" : "f2460d48ce8032",
       "status" : "passed",
       "time" : {
-        "start" : 1739282394646,
-        "stop" : 1739282395436,
-        "duration" : 790
+        "start" : 1739729312832,
+        "stop" : 1739729313116,
+        "duration" : 284
       }
     } ]
   },
   "269615b498752649910b7bea50c2c7b3" : {
     "statistic" : {
-      "failed" : 0,
+      "failed" : 1,
       "broken" : 0,
       "skipped" : 0,
-      "passed" : 1,
+      "passed" : 0,
       "unknown" : 0,
       "total" : 1
     },
     "items" : [ {
-      "uid" : "f084ad8e1ecf3623",
-      "status" : "passed",
+      "uid" : "5d4412abdf3af303",
+      "status" : "failed",
+      "statusDetails" : "1 expectation failed.\nExpected status code <200> but was <400>.\n",
       "time" : {
-        "start" : 1739282398267,
-        "stop" : 1739282401424,
-        "duration" : 3157
+        "start" : 1739729314390,
+        "stop" : 1739729314827,
+        "duration" : 437
       }
     } ]
   },
@@ -182,12 +184,31 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "25f7140a213d8a49",
+      "uid" : "b9387e8615b51a7c",
       "status" : "passed",
       "time" : {
-        "start" : 1739282390064,
-        "stop" : 1739282390922,
-        "duration" : 858
+        "start" : 1739729310392,
+        "stop" : 1739729310774,
+        "duration" : 382
+      }
+    } ]
+  },
+  "d5e42fb77117fa592b9edb5161220380" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "4b8814aa68bfdd16",
+      "status" : "passed",
+      "time" : {
+        "start" : 1739729309198,
+        "stop" : 1739729309971,
+        "duration" : 773
       }
     } ]
   },
@@ -201,17 +222,17 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "6644ab013bc33adb",
+      "uid" : "e5f96959d44d775c",
       "status" : "failed",
-      "statusDetails" : "1 expectation failed.\nExpected status code <401> but was <200>.\n",
+      "statusDetails" : "1 expectation failed.\nExpected status code <401> but was <400>.\n",
       "time" : {
-        "start" : 1739282384179,
-        "stop" : 1739282384287,
-        "duration" : 108
+        "start" : 1739729307812,
+        "stop" : 1739729307924,
+        "duration" : 112
       }
     } ]
   },
-  "d5e42fb77117fa592b9edb5161220380" : {
+  "fc1406b08d78b6807d2e8cc882f9f2a4" : {
     "statistic" : {
       "failed" : 1,
       "broken" : 0,
@@ -221,17 +242,17 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "81f4825bf2a0e44f",
+      "uid" : "f9873ac1ea1f3a03",
       "status" : "failed",
-      "statusDetails" : "\nExpected: is <202>\n     but: was <401>",
+      "statusDetails" : "1 expectation failed.\nExpected status code <200> but was <400>.\n",
       "time" : {
-        "start" : 1739282388249,
-        "stop" : 1739282389176,
-        "duration" : 927
+        "start" : 1739729308603,
+        "stop" : 1739729309078,
+        "duration" : 475
       }
     } ]
   },
-  "fc1406b08d78b6807d2e8cc882f9f2a4" : {
+  "5f226e6747d140c14d033701d2894806" : {
     "statistic" : {
       "failed" : 0,
       "broken" : 0,
@@ -241,32 +262,12 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "80d552285b4b0b68",
+      "uid" : "3c1f0aca35dcc4fd",
       "status" : "passed",
       "time" : {
-        "start" : 1739282385369,
-        "stop" : 1739282388134,
-        "duration" : 2765
-      }
-    } ]
-  },
-  "5f226e6747d140c14d033701d2894806" : {
-    "statistic" : {
-      "failed" : 1,
-      "broken" : 0,
-      "skipped" : 0,
-      "passed" : 0,
-      "unknown" : 0,
-      "total" : 1
-    },
-    "items" : [ {
-      "uid" : "b00d806f01f518a5",
-      "status" : "failed",
-      "statusDetails" : "1 expectation failed.\nExpected status code <200> but was <404>.\n",
-      "time" : {
-        "start" : 1739282394301,
-        "stop" : 1739282394643,
-        "duration" : 342
+        "start" : 1739729312526,
+        "stop" : 1739729312829,
+        "duration" : 303
       }
     } ]
   },
@@ -280,32 +281,13 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "c4ecd68b048fa6a3",
+      "uid" : "662bbeaa54253948",
       "status" : "failed",
       "statusDetails" : "1 expectation failed.\nExpected status code <401> but was <200>.\n",
       "time" : {
-        "start" : 1739282396283,
-        "stop" : 1739282396636,
+        "start" : 1739729313405,
+        "stop" : 1739729313758,
         "duration" : 353
-      }
-    } ]
-  },
-  "c97bf293462df71c7fa01997a4e9f5c4" : {
-    "statistic" : {
-      "failed" : 0,
-      "broken" : 0,
-      "skipped" : 0,
-      "passed" : 1,
-      "unknown" : 0,
-      "total" : 1
-    },
-    "items" : [ {
-      "uid" : "7026a1f48eb1da3a",
-      "status" : "passed",
-      "time" : {
-        "start" : 1739282393506,
-        "stop" : 1739282394299,
-        "duration" : 793
       }
     } ]
   },
@@ -319,16 +301,16 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "5903f1c3d274ee46",
+      "uid" : "31ac883aca52b805",
       "status" : "passed",
       "time" : {
-        "start" : 1739282389958,
-        "stop" : 1739282390060,
-        "duration" : 102
+        "start" : 1739729310285,
+        "stop" : 1739729310389,
+        "duration" : 104
       }
     } ]
   },
-  "cae2e131f9a2835f0e55493ae081da5c" : {
+  "c97bf293462df71c7fa01997a4e9f5c4" : {
     "statistic" : {
       "failed" : 0,
       "broken" : 0,
@@ -338,12 +320,12 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "ea6b1a554b5da618",
+      "uid" : "c01cca0411c40546",
       "status" : "passed",
       "time" : {
-        "start" : 1739282388138,
-        "stop" : 1739282388247,
-        "duration" : 109
+        "start" : 1739729311768,
+        "stop" : 1739729312525,
+        "duration" : 757
       }
     } ]
   },
@@ -357,12 +339,31 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "5bde3db3dcb470f9",
+      "uid" : "6eb2d4643f160c9b",
       "status" : "passed",
       "time" : {
-        "start" : 1739282389283,
-        "stop" : 1739282389957,
-        "duration" : 674
+        "start" : 1739729310087,
+        "stop" : 1739729310284,
+        "duration" : 197
+      }
+    } ]
+  },
+  "cae2e131f9a2835f0e55493ae081da5c" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "894265bfbfeb6aac",
+      "status" : "passed",
+      "time" : {
+        "start" : 1739729309081,
+        "stop" : 1739729309197,
+        "duration" : 116
       }
     } ]
   },
@@ -376,12 +377,12 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "bc9344c3b65be246",
+      "uid" : "9f46aff1677124e0",
       "status" : "passed",
       "time" : {
-        "start" : 1739282384290,
-        "stop" : 1739282385260,
-        "duration" : 970
+        "start" : 1739729307926,
+        "stop" : 1739729308428,
+        "duration" : 502
       }
     } ]
   },
@@ -395,12 +396,12 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "a46f4c57bd048a48",
+      "uid" : "8163a713b5720036",
       "status" : "passed",
       "time" : {
-        "start" : 1739282396638,
-        "stop" : 1739282397402,
-        "duration" : 764
+        "start" : 1739729313760,
+        "stop" : 1739729314034,
+        "duration" : 274
       }
     } ]
   },
@@ -414,12 +415,12 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "fbfc83640998add8",
+      "uid" : "a1b4b8cc9167b98a",
       "status" : "passed",
       "time" : {
-        "start" : 1739282397403,
-        "stop" : 1739282398265,
-        "duration" : 862
+        "start" : 1739729314035,
+        "stop" : 1739729314388,
+        "duration" : 353
       }
     } ]
   },
@@ -433,12 +434,12 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "c7077a4163579427",
+      "uid" : "a4e65f6f8ae3a979",
       "status" : "passed",
       "time" : {
-        "start" : 1739282391753,
-        "stop" : 1739282392680,
-        "duration" : 927
+        "start" : 1739729311103,
+        "stop" : 1739729311467,
+        "duration" : 364
       }
     } ]
   }

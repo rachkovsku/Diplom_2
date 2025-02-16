@@ -4,10 +4,10 @@
     "uid" : "98bca28980e9b1fcf3c2b8fc1d090ee8",
     "name" : "ru.api.tests.OrderCreationTest",
     "statistic" : {
-      "failed" : 3,
+      "failed" : 4,
       "broken" : 0,
       "skipped" : 0,
-      "passed" : 2,
+      "passed" : 1,
       "unknown" : 0,
       "total" : 5
     }
@@ -21,17 +21,6 @@
       "passed" : 7,
       "unknown" : 0,
       "total" : 8
-    }
-  }, {
-    "uid" : "6bff7fd6d01be9df06e57be69fab26e6",
-    "name" : "ru.api.tests.UserCreationTest",
-    "statistic" : {
-      "failed" : 1,
-      "broken" : 0,
-      "skipped" : 0,
-      "passed" : 4,
-      "unknown" : 0,
-      "total" : 5
     }
   }, {
     "uid" : "64106435edde391ba1a056c833cd48a8",
@@ -48,12 +37,23 @@
     "uid" : "c689df419864e67e01536f4a69605231",
     "name" : "ru.api.tests.UserOrdersTest",
     "statistic" : {
+      "failed" : 1,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 2
+    }
+  }, {
+    "uid" : "6bff7fd6d01be9df06e57be69fab26e6",
+    "name" : "ru.api.tests.UserCreationTest",
+    "statistic" : {
       "failed" : 0,
       "broken" : 0,
       "skipped" : 0,
-      "passed" : 2,
+      "passed" : 5,
       "unknown" : 0,
-      "total" : 2
+      "total" : 5
     }
   } ]
 }

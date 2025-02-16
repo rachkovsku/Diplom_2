@@ -1,17 +1,31 @@
 package ru.api.tests;
 
 import io.qameta.allure.Description;
+import io.restassured.RestAssured;
 import io.restassured.response.Response;
-import edu.methods.UserCreationMethods;
+import edu.methods.UserAndOrderMethods;
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
 
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
 
-public class UserCreationTest extends UserCreationMethods {
+public class UserCreationTest extends UserAndOrderMethods {
 
-    private final UserCreationMethods userActions = new UserCreationMethods();
+    private final UserAndOrderMethods userActions = new UserAndOrderMethods();
+    protected String accessToken;
+
+    @Before
+    public void setUp() {
+        RestAssured.baseURI = "https://stellarburgers.nomoreparties.site";
+    }
+
+    @After
+    public void tearDown() {
+            deleteUserByToken(accessToken);
+    }
 
     @Test
     @Description("Создание уникального пользователя и удаление после проверки")
@@ -22,7 +36,7 @@ public class UserCreationTest extends UserCreationMethods {
         Response response = createUniqueUser(email, password, name);
         String accessToken = userActions.verifyUserCreation(response, email, name);
 
-        deleteUserByToken(accessToken);
+
     }
 
     @Test
@@ -34,16 +48,8 @@ public class UserCreationTest extends UserCreationMethods {
         Response firstResponse = userActions.createUniqueUser(email, password, name);
         userActions.verifyUserCreationSuccess(firstResponse);
         accessToken = firstResponse.jsonPath().getString("accessToken");
-
         Response secondResponse = userActions.createUniqueUser(email, password, name);
         userActions.verifyDuplicateUserError(secondResponse);
-
-        Response deleteResponse = given()
-                .header("Authorization", "accessToken")
-                .when()
-                .delete("/api/auth/user");
-        System.out.println("Delete Response Code: " + deleteResponse.getStatusCode());
-        assertThat(deleteResponse.getStatusCode(), is(202));
     }
 
     @Test
@@ -52,7 +58,7 @@ public class UserCreationTest extends UserCreationMethods {
         String email = generateUniqueEmail();
         String name = generateUniqueName();
         Response response = createUniqueUserWithoutPassword(email, name);
-        userActions.verifyUserCreationFailurePassword(response);
+        userActions.verifyUserCreationFailureEmail(response, "Email, password and name are required fields");
     }
 
     @Test
@@ -70,6 +76,6 @@ public class UserCreationTest extends UserCreationMethods {
         String password = generateUniquePassword();
         String email = generateUniqueEmail();
         Response response = createUniqueUserWithoutName(password, email);
-        userActions.verifyUserCreationFailureName(response, "Email, password and name are required fields");
+        userActions.verifyUserCreationFailureEmail(response, "Email, password and name are required fields");
     }
 }
