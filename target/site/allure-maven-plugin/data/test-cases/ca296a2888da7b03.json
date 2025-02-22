@@ -1,0 +1,62 @@
+{
+  "uid" : "ca296a2888da7b03",
+  "name" : "getUserOrdersWithAuthorization",
+  "fullName" : "ru.api.tests.UserOrdersTest.getUserOrdersWithAuthorization",
+  "historyId" : "269615b498752649910b7bea50c2c7b3",
+  "time" : {
+    "start" : 1740245921049,
+    "stop" : 1740245923848,
+    "duration" : 2799
+  },
+  "description" : "Получение заказов авторизованного пользователя",
+  "descriptionHtml" : "<p>Получение заказов авторизованного пользователя</p>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "ru.api.tests"
+  }, {
+    "name" : "testClass",
+    "value" : "ru.api.tests.UserOrdersTest"
+  }, {
+    "name" : "testMethod",
+    "value" : "getUserOrdersWithAuthorization"
+  }, {
+    "name" : "suite",
+    "value" : "ru.api.tests.UserOrdersTest"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-GATO7BH"
+  }, {
+    "name" : "thread",
+    "value" : "2124@DESKTOP-GATO7BH.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "junit4"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "ca296a2888da7b03.json",
+  "parameterValues" : [ ]
+}

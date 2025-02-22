@@ -1,0 +1,62 @@
+{
+  "uid" : "9e3ec270170da41e",
+  "name" : "updateUserWithoutAuthorizationAllData",
+  "fullName" : "ru.api.tests.UserDataUpdateTest.updateUserWithoutAuthorizationAllData",
+  "historyId" : "cf7fad9ea12e95708ccf9a1c903832f0",
+  "time" : {
+    "start" : 1740245919431,
+    "stop" : 1740245919743,
+    "duration" : 312
+  },
+  "description" : "Изменение всех данных пользователя без авторизации",
+  "descriptionHtml" : "<p>Изменение всех данных пользователя без авторизации</p>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "ru.api.tests"
+  }, {
+    "name" : "testClass",
+    "value" : "ru.api.tests.UserDataUpdateTest"
+  }, {
+    "name" : "testMethod",
+    "value" : "updateUserWithoutAuthorizationAllData"
+  }, {
+    "name" : "suite",
+    "value" : "ru.api.tests.UserDataUpdateTest"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-GATO7BH"
+  }, {
+    "name" : "thread",
+    "value" : "2124@DESKTOP-GATO7BH.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "junit4"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "9e3ec270170da41e.json",
+  "parameterValues" : [ ]
+}

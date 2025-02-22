@@ -1,0 +1,62 @@
+{
+  "uid" : "8c0bdc19beeb0fcb",
+  "name" : "createOrderAndGetUserOrdersWithoutAuthorization",
+  "fullName" : "ru.api.tests.UserOrdersTest.createOrderAndGetUserOrdersWithoutAuthorization",
+  "historyId" : "2d0437bbfeaed1bf2996face77f86da6",
+  "time" : {
+    "start" : 1740245923850,
+    "stop" : 1740245923956,
+    "duration" : 106
+  },
+  "description" : "Проверка получения списка заказов без авторизации",
+  "descriptionHtml" : "<p>Проверка получения списка заказов без авторизации</p>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "ru.api.tests"
+  }, {
+    "name" : "testClass",
+    "value" : "ru.api.tests.UserOrdersTest"
+  }, {
+    "name" : "testMethod",
+    "value" : "createOrderAndGetUserOrdersWithoutAuthorization"
+  }, {
+    "name" : "suite",
+    "value" : "ru.api.tests.UserOrdersTest"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-GATO7BH"
+  }, {
+    "name" : "thread",
+    "value" : "2124@DESKTOP-GATO7BH.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "junit4"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "8c0bdc19beeb0fcb.json",
+  "parameterValues" : [ ]
+}
