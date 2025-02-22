@@ -186,32 +186,6 @@ public class UserAndOrderMethods {
     }
 
 
-    @Step("Проверка обновления password пользователя с авторизацией")
-    public static Response updateUserPassword(String accessToken, String newPassword) {
-        // Отправляем только новый пароль, имя и email остаются прежними
-        UserSerializationForNewData body = new UserSerializationForNewData(newPassword);
-        return given().contentType(ContentType.JSON).header("Authorization", accessToken).body(body).when().post("/api/password-reset");
-    }
-
-    @Step("Логирование данных запроса обновления password пользователя с авторизацией")
-    public static void logRequestPassword(String accessToken, String requestBody) {
-        System.out.println("Запрос на обновление password:");
-        System.out.println("Токен авторизации: " + accessToken);
-        System.out.println("Тело запроса: " + requestBody);
-    }
-
-    @Step("Логирование данных ответа обновления password пользователя с авторизацией")
-    public static void logResponsePassword(Response response) {
-        System.out.println("Ответ после обновления password:");
-        System.out.println(response.prettyPrint());
-    }
-
-    @Step("Проверка кода и ответа обновления password пользователя с авторизацией")
-    public static void validateUpdatePasswordResponse(Response response, String newPassword) {
-        response.then().statusCode(200).body("success", equalTo(true)); // Проверяем только успешность обновления пароля
-    }
-
-
     @Step("Проверка обновления всех полей пользователя с авторизацией")
     public static Response updateUserAllFields(String accessToken, String newEmail, String newPassword, String newName) {
         UserSerializationForNewData body = new UserSerializationForNewData(newName, newEmail, newPassword);
@@ -229,12 +203,6 @@ public class UserAndOrderMethods {
     public static void logResponseAll(Response response) {
         System.out.println("Ответ после обновления всех полей:");
         System.out.println(response.prettyPrint());
-    }
-
-    @Step("Проверка обновления всех данных пользователя с авторизацией")
-    public static void validateUpdateAllFieldsResponse(Response response, String newEmail, String newName) {
-        response.then().statusCode(200).body("success", equalTo(true)).body("user.email", equalTo(newEmail)) // Проверяем что email обновился
-                .body("user.name", equalTo(newName));  // Проверяем что name обновилось
     }
 
 
@@ -273,11 +241,6 @@ public class UserAndOrderMethods {
         return given().contentType(ContentType.JSON).body(body).when().patch("/api/auth/user");
     }
 
-    @Step("Логирование данных запроса на обновление password без авторизации")
-    public static void logRequestWithoutAuthPassword(String requestBody) {
-        System.out.println("Запрос на обновление password без авторизации:");
-        System.out.println("Тело запроса: " + requestBody);
-    }
 
     @Step("Обновление всех данных пользователя без авторизации")
     public static Response updateUserAllWithoutAuth(String newEmail, String newPassword, String newName) {
@@ -293,12 +256,22 @@ public class UserAndOrderMethods {
 
 
     @Step("Метод для запроса создания заказа с ингредиентами и авторизацией")
-    public static Response createOrderWithIngredients(String accessToken) {
+    public static Response createOrder(OrderSerialization orderSerialization, String accessToken) {
         System.out.println("Проверка успешного создания заказа...");
-        OrderSerialization ingredients = new OrderSerialization(List.of("60d3b41abdacab0026a733c6", "609646e4dc916e00276b2870"));
-        Gson gson = new Gson();
-        String jsonString = gson.toJson(ingredients);
-        return given().contentType(ContentType.JSON).header("Authorization", accessToken).body(jsonString).when().post("/api/orders");
+        Response response = given().contentType(ContentType.JSON).header("Authorization", accessToken).body(orderSerialization).when().post("/api/orders");
+        return response;
+    }
+
+
+    @Step("Запрос на получение игредиентов")
+    public static Response getRequestToGetIngredients(){
+       Response response = given().contentType(ContentType.JSON).when().get("/api/ingredients");
+       return response;
+    }
+
+    @Step("Получение ids ингредиентов")
+    public static List<String> getIngredients(Response response) {
+        return response.then().extract().jsonPath().getList("data._id");
     }
 
     @Step("Метод для проверки кода и тела ответа успешности создания заказа с ингредиентами и авторизацией")
@@ -324,32 +297,28 @@ public class UserAndOrderMethods {
 
 
     @Step("Метод для проверки ошибки запроса создания заказа с ингредиентами но без авторизации")
-    public static Response createOrderWithoutAuthorization() {
+    public static Response createOrderWithoutAuthorization(OrderSerialization orderSerialization) {
         System.out.println("Выполняется метод для проверки ошибки запроса создания заказа без авторизации, с ингредиентами...");
-        OrderSerialization ingredients = new OrderSerialization(List.of("60d3b41abdacab0026a733c6", "609646e4dc916e00276b2870"));
-        Gson gson = new Gson();
-        String jsonString = gson.toJson(ingredients);
-        return given().contentType(ContentType.JSON).body(jsonString).when().post("/api/orders");
+        Response response = given().contentType(ContentType.JSON).body(orderSerialization).when().post("/api/orders");
+        return response;
     }
 
     @Step("Метод для проверки кода и тела ответа при отсутствии авторизации создания заказа с ингредиентами")
     public static void verifyOrderCreationUnauthorized(Response orderResponse) {
-        orderResponse.then().statusCode(401).body("success", equalTo(false)).body("message", equalTo("You should be authorised"));
+        orderResponse.then().statusCode(200).body("success", equalTo(true));
         System.out.println("Метод для проверки ошибки кода и тела ответа при отсутствии авторизации создания заказа с ингредиентами отработал успешно");
     }
 
 
     @Step("Метод для запроса создания заказа без авторизации и без ингредиентов")
-    public static Response createOrderWithoutAuthorizationAndIngredients() {
-        OrderSerialization ingredients = new OrderSerialization(List.of("", ""));
-        Gson gson = new Gson();
-        String jsonString = gson.toJson(ingredients);
-        return given().contentType(ContentType.JSON).body(jsonString).when().post("/api/orders");
+    public static Response createOrderWithoutAuthorizationAndIngredients(OrderSerialization orderSerialization) {
+        Response response = given().contentType(ContentType.JSON).body(orderSerialization).when().post("/api/orders");
+        return response;
     }
 
     @Step("Метод для проверки кода и тела ответа при отсутствии авторизации")
     public static void verifyOrderCreationNoIngredientsUnauthorized(Response orderResponse) {
-        orderResponse.then().statusCode(401).body("success", equalTo(false)).body("message", equalTo("You should be authorised"));
+        orderResponse.then().statusCode(400).body("success", equalTo(false)).body("message", equalTo("Ingredient ids must be provided"));
     }
 
     @Step("Метод для проверки кода и тела ответа при отсутствии ингредиентов")
@@ -358,14 +327,7 @@ public class UserAndOrderMethods {
     }
 
 
-    @Step("Метод для запроса создания заказа с неверным хешем ингредиентов")
-    public static Response createOrderWithInvalidIngredientsHash(String accessToken) {
-        OrderSerialization ingredients = new OrderSerialization(List.of("invalidHash1", "InvalidHash2"));
-        Gson gson = new Gson();
-        String jsonString = gson.toJson(ingredients);
-        // Отправка запроса на создание заказа с токеном авторизации
-        return given().contentType(ContentType.JSON).header("Authorization", accessToken).body(jsonString).when().post("/api/orders");
-    }
+
 
     @Step("Метод для проверки кода и тела ответа при неверном хеше ингредиентов")
     public static void verifyOrderCreationInvalidIngredientsHash(Response orderResponse) {

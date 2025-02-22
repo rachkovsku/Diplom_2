@@ -1,0 +1,62 @@
+{
+  "uid" : "40d17fac118a50d2",
+  "name" : "createOrderWithNoAuthorizationAndIngredients",
+  "fullName" : "ru.api.tests.OrderCreationTest.createOrderWithNoAuthorizationAndIngredients",
+  "historyId" : "3504de5c8c332660007205a6c34d9864",
+  "time" : {
+    "start" : 1740245914038,
+    "stop" : 1740245914153,
+    "duration" : 115
+  },
+  "description" : "Создание заказа без авторизации и без ингредиентов",
+  "descriptionHtml" : "<p>Создание заказа без авторизации и без ингредиентов</p>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "ru.api.tests"
+  }, {
+    "name" : "testClass",
+    "value" : "ru.api.tests.OrderCreationTest"
+  }, {
+    "name" : "testMethod",
+    "value" : "createOrderWithNoAuthorizationAndIngredients"
+  }, {
+    "name" : "suite",
+    "value" : "ru.api.tests.OrderCreationTest"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-GATO7BH"
+  }, {
+    "name" : "thread",
+    "value" : "2124@DESKTOP-GATO7BH.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "junit4"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "40d17fac118a50d2.json",
+  "parameterValues" : [ ]
+}

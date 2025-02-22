@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="ru.api.tests.UserCreationTest" time="1.293" tests="5" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="ru.api.tests.UserCreationTest" time="1.305" tests="5" errors="0" skipped="0" failures="0">
   <properties>
     <property name="sun.desktop" value="windows"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -17,7 +17,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="RU"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Amazon Corretto\jdk11.0.24_8\bin"/>
-    <property name="sun.java.command" value="C:\Users\админ\AppData\Local\Temp\surefire596797984343338474\surefirebooter-20250216210825323_3.jar C:\Users\админ\AppData\Local\Temp\surefire596797984343338474 2025-02-16T21-08-25_035-jvmRun1 surefire-20250216210825323_1tmp surefire_0-20250216210825323_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\админ\AppData\Local\Temp\surefire2788756571214831116\surefirebooter-20250222203830836_3.jar C:\Users\админ\AppData\Local\Temp\surefire2788756571214831116 2025-02-22T20-38-30_565-jvmRun1 surefire-20250222203830836_1tmp surefire_0-20250222203830836_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\AllProgs\IntelliJ IDEA Community Edition 2024.1.5\Projects\Diplom\Diplom_2\target\test-classes;C:\AllProgs\IntelliJ IDEA Community Edition 2024.1.5\Projects\Diplom\Diplom_2\target\classes;C:\Users\админ\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\админ\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\админ\.m2\repository\io\rest-assured\rest-assured\4.5.1\rest-assured-4.5.1.jar;C:\Users\админ\.m2\repository\org\codehaus\groovy\groovy\3.0.9\groovy-3.0.9.jar;C:\Users\админ\.m2\repository\org\codehaus\groovy\groovy-xml\3.0.9\groovy-xml-3.0.9.jar;C:\Users\админ\.m2\repository\org\apache\httpcomponents\httpclient\4.5.13\httpclient-4.5.13.jar;C:\Users\админ\.m2\repository\org\apache\httpcomponents\httpcore\4.4.13\httpcore-4.4.13.jar;C:\Users\админ\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\админ\.m2\repository\commons-codec\commons-codec\1.11\commons-codec-1.11.jar;C:\Users\админ\.m2\repository\org\apache\httpcomponents\httpmime\4.5.13\httpmime-4.5.13.jar;C:\Users\админ\.m2\repository\org\hamcrest\hamcrest\2.1\hamcrest-2.1.jar;C:\Users\админ\.m2\repository\org\ccil\cowan\tagsoup\tagsoup\1.2.1\tagsoup-1.2.1.jar;C:\Users\админ\.m2\repository\io\rest-assured\json-path\4.5.1\json-path-4.5.1.jar;C:\Users\админ\.m2\repository\org\codehaus\groovy\groovy-json\3.0.9\groovy-json-3.0.9.jar;C:\Users\админ\.m2\repository\io\rest-assured\rest-assured-common\4.5.1\rest-assured-common-4.5.1.jar;C:\Users\админ\.m2\repository\io\rest-assured\xml-path\4.5.1\xml-path-4.5.1.jar;C:\Users\админ\.m2\repository\org\apache\commons\commons-lang3\3.11\commons-lang3-3.11.jar;C:\Users\админ\.m2\repository\io\qameta\allure\allure-junit4\2.17.3\allure-junit4-2.17.3.jar;C:\Users\админ\.m2\repository\io\qameta\allure\allure-java-commons\2.17.3\allure-java-commons-2.17.3.jar;C:\Users\админ\.m2\repository\org\slf4j\slf4j-api\1.7.30\slf4j-api-1.7.30.jar;C:\Users\админ\.m2\repository\io\qameta\allure\allure-model\2.17.3\allure-model-2.17.3.jar;C:\Users\админ\.m2\repository\io\qameta\allure\allure-rest-assured\2.17.3\allure-rest-assured-2.17.3.jar;C:\Users\админ\.m2\repository\io\qameta\allure\allure-attachments\2.17.3\allure-attachments-2.17.3.jar;C:\Users\админ\.m2\repository\org\freemarker\freemarker\2.3.31\freemarker-2.3.31.jar;C:\Users\админ\.m2\repository\com\google\code\gson\gson\2.8.9\gson-2.8.9.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -34,7 +34,7 @@
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="C:\Users\админ\AppData\Local\Temp\surefire596797984343338474\surefirebooter-20250216210825323_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\админ\AppData\Local\Temp\surefire2788756571214831116\surefirebooter-20250222203830836_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="11.0.24+8-LTS"/>
@@ -63,7 +63,7 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="55.0"/>
   </properties>
-  <testcase name="createUserWithoutRequiredFieldPassword" classname="ru.api.tests.UserCreationTest" time="0.1">
+  <testcase name="createUserWithoutRequiredFieldPassword" classname="ru.api.tests.UserCreationTest" time="0.098">
     <system-out><![CDATA[Response Code: 403
 {
     "success": false,
@@ -76,29 +76,29 @@ Response body:
 }
 ]]></system-out>
   </testcase>
-  <testcase name="createExistingUser" classname="ru.api.tests.UserCreationTest" time="0.773">
-    <system-out><![CDATA[Пользователь успешно создан: userd5949e@yandex.ru
+  <testcase name="createExistingUser" classname="ru.api.tests.UserCreationTest" time="0.787">
+    <system-out><![CDATA[Пользователь успешно создан: userff7920@yandex.ru
 Response Code: 200
 {
     "success": true,
     "user": {
-        "email": "userd5949e@yandex.ru",
-        "name": "User1c4cfe"
+        "email": "userff7920@yandex.ru",
+        "name": "User184910"
     },
-    "accessToken": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3YjIyOTljOWVkMjgwMDAxYjU3ODZmMiIsImlhdCI6MTczOTcyOTMwOCwiZXhwIjoxNzM5NzMwNTA4fQ.uloQiEGmmt71QlSXAjKMk6BI6wvindWgMemiAtdf9GE",
-    "refreshToken": "cf8a0ff3f1f91927f214118be637cca5bed58d9e7ea46dbbf2927bab674dae27c0f6c659fc0423fc"
+    "accessToken": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3YmEwYjlkOWVkMjgwMDAxYjU4MWJhNSIsImlhdCI6MTc0MDI0NTkxNywiZXhwIjoxNzQwMjQ3MTE3fQ._h8ohv3X7TmyzlJi1IWdKNTDnYewp8dT6z3yUzxwXFM",
+    "refreshToken": "47a5e1d7a4e9d26cddb11f2321874e905dfe8734db84f0a7063b22a7f4cca392307d8893f0205a19"
 }
 Response body:
 {
     "success": true,
     "user": {
-        "email": "userd5949e@yandex.ru",
-        "name": "User1c4cfe"
+        "email": "userff7920@yandex.ru",
+        "name": "User184910"
     },
-    "accessToken": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3YjIyOTljOWVkMjgwMDAxYjU3ODZmMiIsImlhdCI6MTczOTcyOTMwOCwiZXhwIjoxNzM5NzMwNTA4fQ.uloQiEGmmt71QlSXAjKMk6BI6wvindWgMemiAtdf9GE",
-    "refreshToken": "cf8a0ff3f1f91927f214118be637cca5bed58d9e7ea46dbbf2927bab674dae27c0f6c659fc0423fc"
+    "accessToken": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3YmEwYjlkOWVkMjgwMDAxYjU4MWJhNSIsImlhdCI6MTc0MDI0NTkxNywiZXhwIjoxNzQwMjQ3MTE3fQ._h8ohv3X7TmyzlJi1IWdKNTDnYewp8dT6z3yUzxwXFM",
+    "refreshToken": "47a5e1d7a4e9d26cddb11f2321874e905dfe8734db84f0a7063b22a7f4cca392307d8893f0205a19"
 }
-Пользователь успешно создан: userd5949e@yandex.ru
+Пользователь успешно создан: userff7920@yandex.ru
 Response Code: 403
 {
     "success": false,
@@ -113,7 +113,7 @@ Delete Response Code = 202
 Пользователь успешно удален
 ]]></system-out>
   </testcase>
-  <testcase name="createUserWithoutRequiredFieldName" classname="ru.api.tests.UserCreationTest" time="0.115">
+  <testcase name="createUserWithoutRequiredFieldName" classname="ru.api.tests.UserCreationTest" time="0.11">
     <system-out><![CDATA[Response Code: 403
 {
     "success": false,
@@ -126,31 +126,31 @@ Response body:
 }
 ]]></system-out>
   </testcase>
-  <testcase name="creationUniqueUser" classname="ru.api.tests.UserCreationTest" time="0.198">
-    <system-out><![CDATA[Пользователь успешно создан: userc6e624@yandex.ru
+  <testcase name="creationUniqueUser" classname="ru.api.tests.UserCreationTest" time="0.191">
+    <system-out><![CDATA[Пользователь успешно создан: user1a90b6@yandex.ru
 Response Code: 200
 {
     "success": true,
     "user": {
-        "email": "userc6e624@yandex.ru",
-        "name": "Userd5d3cb"
+        "email": "user1a90b6@yandex.ru",
+        "name": "Userb8cec9"
     },
-    "accessToken": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3YjIyOTlkOWVkMjgwMDAxYjU3ODZmNCIsImlhdCI6MTczOTcyOTMwOSwiZXhwIjoxNzM5NzMwNTA5fQ.18mG37eu5vLTqMfUIA-19jmh8WeOirenH7sETYcFJyQ",
-    "refreshToken": "d9c008dc4b0e06a2e8723a89dbe7ef87ab16955351d9ee2824ff2abea7ea20aca4a288e9c95f2f62"
+    "accessToken": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3YmEwYjllOWVkMjgwMDAxYjU4MWJhNyIsImlhdCI6MTc0MDI0NTkxOCwiZXhwIjoxNzQwMjQ3MTE4fQ.5zdBYtaZZC58zcphwqWBfzZ2EzDZXMWg0S3JkQearQI",
+    "refreshToken": "dcddfa027b5eb29d20ea5e947f8649af52426f34588b6e530d1d6e099e4236120e93e7244a894443"
 }
 Response body:
 {
     "success": true,
     "user": {
-        "email": "userc6e624@yandex.ru",
-        "name": "Userd5d3cb"
+        "email": "user1a90b6@yandex.ru",
+        "name": "Userb8cec9"
     },
-    "accessToken": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3YjIyOTlkOWVkMjgwMDAxYjU3ODZmNCIsImlhdCI6MTczOTcyOTMwOSwiZXhwIjoxNzM5NzMwNTA5fQ.18mG37eu5vLTqMfUIA-19jmh8WeOirenH7sETYcFJyQ",
-    "refreshToken": "d9c008dc4b0e06a2e8723a89dbe7ef87ab16955351d9ee2824ff2abea7ea20aca4a288e9c95f2f62"
+    "accessToken": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3YmEwYjllOWVkMjgwMDAxYjU4MWJhNyIsImlhdCI6MTc0MDI0NTkxOCwiZXhwIjoxNzQwMjQ3MTE4fQ.5zdBYtaZZC58zcphwqWBfzZ2EzDZXMWg0S3JkQearQI",
+    "refreshToken": "dcddfa027b5eb29d20ea5e947f8649af52426f34588b6e530d1d6e099e4236120e93e7244a894443"
 }
 ]]></system-out>
   </testcase>
-  <testcase name="createUserWithoutRequiredFieldEmail" classname="ru.api.tests.UserCreationTest" time="0.105">
+  <testcase name="createUserWithoutRequiredFieldEmail" classname="ru.api.tests.UserCreationTest" time="0.115">
     <system-out><![CDATA[Response Code: 403
 {
     "success": false,

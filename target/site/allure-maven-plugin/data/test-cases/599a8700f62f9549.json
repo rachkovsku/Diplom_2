@@ -1,0 +1,62 @@
+{
+  "uid" : "599a8700f62f9549",
+  "name" : "createOrderWithInvalidIngredientsHash",
+  "fullName" : "ru.api.tests.OrderCreationTest.createOrderWithInvalidIngredientsHash",
+  "historyId" : "83a6a4ddca72e91cb4c05f9a4c20c14a",
+  "time" : {
+    "start" : 1740245911400,
+    "stop" : 1740245913239,
+    "duration" : 1839
+  },
+  "description" : "Создание заказа с неверным хешем ингредиентов",
+  "descriptionHtml" : "<p>Создание заказа с неверным хешем ингредиентов</p>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "ru.api.tests"
+  }, {
+    "name" : "testClass",
+    "value" : "ru.api.tests.OrderCreationTest"
+  }, {
+    "name" : "testMethod",
+    "value" : "createOrderWithInvalidIngredientsHash"
+  }, {
+    "name" : "suite",
+    "value" : "ru.api.tests.OrderCreationTest"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-GATO7BH"
+  }, {
+    "name" : "thread",
+    "value" : "2124@DESKTOP-GATO7BH.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "junit4"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "599a8700f62f9549.json",
+  "parameterValues" : [ ]
+}

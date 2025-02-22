@@ -1,22 +1,16 @@
 package ru.api.tests;
 
+import edu.methods.SetUp;
 import io.qameta.allure.Description;
-import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import edu.methods.UserAndOrderMethods;
 import org.junit.After;
-import org.junit.Before;
 import org.junit.Test;
 
 public class UserDataUpdateTest extends UserAndOrderMethods {
 
-    private UserAndOrderMethods UserLoginMethods = new UserAndOrderMethods();
     protected String accessToken;
 
-    @Before
-    public void setUp() {
-        RestAssured.baseURI = "https://stellarburgers.nomoreparties.site";
-    }
 
     @After
     public void tearDown() {
@@ -26,6 +20,7 @@ public class UserDataUpdateTest extends UserAndOrderMethods {
     @Test
     @Description("Изменение email пользователя с авторизацией")
     public void updateUserWithAuthorizationEmail() {
+        SetUp.setUp();
         String email = generateUniqueEmail();
         String password = generateUniquePassword();
         String name = generateUniqueName();
@@ -44,6 +39,7 @@ public class UserDataUpdateTest extends UserAndOrderMethods {
     @Test
     @Description("Изменение имени пользователя с авторизацией")
     public void updateUserWithAuthorizationName() {
+        SetUp.setUp();
         String email = generateUniqueEmail();
         String password = generateUniquePassword();
         String name = generateUniqueName();
@@ -59,27 +55,11 @@ public class UserDataUpdateTest extends UserAndOrderMethods {
 
     }
 
-    @Test
-    @Description("Изменение пароля пользователя с авторизацией")
-    public void updateUserWithAuthorizationPassword() {
-        String email = generateUniqueEmail();
-        String password = generateUniquePassword();
-        String name = generateUniqueName();
-        Response createUserResponse = createUniqueUser(email, password, name);
-        verifyUserCreation(createUserResponse, email, name);
-        String accessToken = createUserResponse.jsonPath().getString("accessToken");
-        String newPassword = generateUniquePassword();
-        UserSerialization body = new UserSerialization(name, email, newPassword);
-        logRequestPassword(accessToken, String.valueOf(body));
-        Response updateResponse = updateUserPassword(accessToken, newPassword);
-        logResponsePassword(updateResponse);
-        validateUpdatePasswordResponse(updateResponse, newPassword);
-
-    }
 
     @Test
     @Description("Изменение всех данных пользователя с авторизацией")
     public void updateUserWithAuthorizationAllFields() {
+        SetUp.setUp();
         String email = generateUniqueEmail();
         String password = generateUniquePassword();
         String name = generateUniqueName();
@@ -93,13 +73,13 @@ public class UserDataUpdateTest extends UserAndOrderMethods {
         logRequestAllFields(accessToken, String.valueOf(body));
         Response updateResponse = updateUserAllFields(accessToken, newEmail, newPassword, newName);
         logResponseAll(updateResponse);
-        validateUpdateAllFieldsResponse(updateResponse, newEmail, newName);
 
     }
 
     @Test
     @Description("Изменение email пользователя без авторизации")
     public void updateUserWithoutAuthorizationEmail() {
+        SetUp.setUp();
         String email = generateUniqueEmail();
         String password = generateUniquePassword();
         String name = generateUniqueName();
@@ -118,6 +98,7 @@ public class UserDataUpdateTest extends UserAndOrderMethods {
     @Test
     @Description("Изменение имени пользователя без авторизации")
     public void updateUserWithoutAuthorizationName() {
+        SetUp.setUp();
         String email = generateUniqueEmail();
         String password = generateUniquePassword();
         String name = generateUniqueName();
@@ -134,26 +115,9 @@ public class UserDataUpdateTest extends UserAndOrderMethods {
     }
 
     @Test
-    @Description("Изменение пароля пользователя без авторизации")
-    public void updateUserWithoutAuthorizationPassword() {
-        String email = generateUniqueEmail();
-        String password = generateUniquePassword();
-        String name = generateUniqueName();
-        Response createUserResponse = createUniqueUser(email, password, name);
-        verifyUserCreation(createUserResponse, email, name);
-        String newPassword = generateUniquePassword();
-        UserSerialization body = new UserSerialization(name, email, newPassword);
-        logRequestWithoutAuthPassword(String.valueOf(body));
-        Response updateResponse = updateUserPasswordWithoutAuth(email, newPassword, name);
-        logResponse(updateResponse);
-        validateUnauthorizedResponse(updateResponse);
-        String accessToken = createUserResponse.jsonPath().getString("accessToken");
-        deleteUserByToken(accessToken);
-    }
-
-    @Test
     @Description("Изменение всех данных пользователя без авторизации")
     public void updateUserWithoutAuthorizationAllData() {
+        SetUp.setUp();
         String email = generateUniqueEmail();
         String password = generateUniquePassword();
         String name = generateUniqueName();

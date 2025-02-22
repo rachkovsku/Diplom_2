@@ -1,5 +1,7 @@
 package ru.api.tests;
 
+
+
 import java.util.List;
 
 public class OrderSerialization {
@@ -9,6 +11,7 @@ public class OrderSerialization {
         this.ingredients = ingredients;
     }
 
+
     public List<String> getIngredients() {
         return ingredients;
     }
@@ -16,4 +19,6 @@ public class OrderSerialization {
     public void setIngredients(List<String> ingredients) {
         this.ingredients = ingredients;
     }
+
+
 }

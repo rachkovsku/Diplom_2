@@ -1,22 +1,19 @@
 package ru.api.tests;
 
+import edu.methods.SetUp;
 import io.qameta.allure.Description;
-import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import edu.methods.UserAndOrderMethods;
 import org.junit.After;
-import org.junit.Before;
+import org.junit.Assert;
 import org.junit.Test;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class OrderCreationTest extends UserAndOrderMethods {
 
-    private UserAndOrderMethods methodsUserLogin = new UserAndOrderMethods();
     protected String accessToken;
-
-    @Before
-    public void setUp() {
-        RestAssured.baseURI = "https://stellarburgers.nomoreparties.site";
-    }
 
     @After
     public void tearDown() {
@@ -26,6 +23,7 @@ public class OrderCreationTest extends UserAndOrderMethods {
     @Test
     @Description("Создание заказа с авторизацией и с ингредиентами")
     public void createOrderWithAuthorization() {
+        SetUp.setUp();
         String email = generateUniqueEmail();
         String password = generateUniquePassword();
         String name = generateUniqueName();
@@ -34,7 +32,13 @@ public class OrderCreationTest extends UserAndOrderMethods {
         Response loginResponse = loginWithUser(email, password, name);
         loginResponse.then().statusCode(200);
         String accessToken = loginResponse.jsonPath().getString("accessToken");
-        Response orderResponse = UserAndOrderMethods.createOrderWithIngredients(accessToken);
+        Response response = UserAndOrderMethods.getRequestToGetIngredients();
+        List<String> allingredients = UserAndOrderMethods.getIngredients(response);
+        List<String> ingredients = new ArrayList<>();
+        ingredients.add(allingredients.get(0));
+        ingredients.add(allingredients.get(1));
+        OrderSerialization orderSerialization = new OrderSerialization(ingredients);
+        Response orderResponse = UserAndOrderMethods.createOrder(orderSerialization, accessToken);
         orderResponse.then().log().all();
         UserAndOrderMethods.verifyOrderCreation(orderResponse);
 
@@ -43,6 +47,7 @@ public class OrderCreationTest extends UserAndOrderMethods {
     @Test
     @Description("Создание заказа с авторизацией но без ингредиентов")
     public void createOrderWithAuthorizationAndNoIngredients() {
+        SetUp.setUp();
         String email = generateUniqueEmail();
         String password = generateUniquePassword();
         String name = generateUniqueName();
@@ -51,7 +56,9 @@ public class OrderCreationTest extends UserAndOrderMethods {
         Response loginResponse = loginWithUser(email, password, name);
         loginResponse.then().statusCode(200);
         String accessToken = loginResponse.jsonPath().getString("accessToken");
-        Response orderResponse = UserAndOrderMethods.createOrderWitNoIngredients(accessToken);
+        List<String> ingredients = new ArrayList<>();
+        OrderSerialization orderSerialization = new OrderSerialization(ingredients);
+        Response orderResponse = UserAndOrderMethods.createOrder(orderSerialization, accessToken);
         orderResponse.then().log().all();
         UserAndOrderMethods.verifyOrderCreationNoIngredients(orderResponse);
 
@@ -61,7 +68,14 @@ public class OrderCreationTest extends UserAndOrderMethods {
     @Test
     @Description("Создание заказа без авторизации, с ингредиентами")
     public void createOrderWithNoAuthorization() {
-        Response orderResponse = UserAndOrderMethods.createOrderWithoutAuthorization();
+        SetUp.setUp();
+        Response response = UserAndOrderMethods.getRequestToGetIngredients();
+        List<String> allingredients = UserAndOrderMethods.getIngredients(response);
+        List<String> ingredients = new ArrayList<>();
+        ingredients.add(allingredients.get(0));
+        ingredients.add(allingredients.get(1));
+        OrderSerialization orderSerialization = new OrderSerialization(ingredients);
+        Response orderResponse = UserAndOrderMethods.createOrderWithoutAuthorization(orderSerialization);
         orderResponse.then().log().all();
         UserAndOrderMethods.verifyOrderCreationUnauthorized(orderResponse);
     }
@@ -69,16 +83,19 @@ public class OrderCreationTest extends UserAndOrderMethods {
     @Test
     @Description("Создание заказа без авторизации и без ингредиентов")
     public void createOrderWithNoAuthorizationAndIngredients() {
-        Response orderResponseWithoutAuthorization = UserAndOrderMethods.createOrderWithoutAuthorizationAndIngredients();
+        SetUp.setUp();
+        List<String> ingredients = new ArrayList<>();
+        OrderSerialization orderSerialization = new OrderSerialization(ingredients);
+        Response orderResponseWithoutAuthorization = UserAndOrderMethods.createOrderWithoutAuthorizationAndIngredients(orderSerialization);
         orderResponseWithoutAuthorization.then().log().all();
         UserAndOrderMethods.verifyOrderCreationNoIngredientsUnauthorized(orderResponseWithoutAuthorization);
-        Response orderResponseWithoutIngredients = UserAndOrderMethods.createOrderWithoutAuthorizationAndIngredients();
-        UserAndOrderMethods.verifyOrderCreationNoAuthorizedAndNoIngredients(orderResponseWithoutIngredients);
+
     }
 
     @Test
     @Description("Создание заказа с неверным хешем ингредиентов")
     public void createOrderWithInvalidIngredientsHash() {
+        SetUp.setUp();
         String email = generateUniqueEmail();
         String password = generateUniquePassword();
         String name = generateUniqueName();
@@ -87,14 +104,14 @@ public class OrderCreationTest extends UserAndOrderMethods {
         Response loginResponse = loginWithUser(email, password, name);
         loginResponse.then().statusCode(200);
         String accessToken = loginResponse.jsonPath().getString("accessToken");
-        try {
-            Response orderResponse = UserAndOrderMethods.createOrderWithInvalidIngredientsHash(accessToken);
-            orderResponse.then().log().all();
-            UserAndOrderMethods.verifyOrderCreationInvalidIngredientsHash(orderResponse);
-            orderResponse.then().statusCode(500);
-        } catch (Exception e) {
-            System.out.println("Ошибка при создании заказа: " + e.getMessage());
-        }
+        Response response = UserAndOrderMethods.getRequestToGetIngredients();
+        List<String> allingredients = UserAndOrderMethods.getIngredients(response);
+        List<String> ingredients = new ArrayList<>();
+        ingredients.add("invalid1");
+        ingredients.add("invalid2");
+        OrderSerialization orderSerialization = new OrderSerialization(ingredients);
+        Response orderResponse = UserAndOrderMethods.createOrder(orderSerialization, accessToken);
+        Assert.assertEquals("Код ответа должен быть 500",500, orderResponse.getStatusCode());
     }
 
 

@@ -1,0 +1,62 @@
+{
+  "uid" : "e46ed967edc45ace",
+  "name" : "creationUniqueUser",
+  "fullName" : "ru.api.tests.UserCreationTest.creationUniqueUser",
+  "historyId" : "ab64c0156fe0a485eb17ec52b3a5914f",
+  "time" : {
+    "start" : 1740245917759,
+    "stop" : 1740245917949,
+    "duration" : 190
+  },
+  "description" : "Создание уникального пользователя и удаление после проверки",
+  "descriptionHtml" : "<p>Создание уникального пользователя и удаление после проверки</p>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "ru.api.tests"
+  }, {
+    "name" : "testClass",
+    "value" : "ru.api.tests.UserCreationTest"
+  }, {
+    "name" : "testMethod",
+    "value" : "creationUniqueUser"
+  }, {
+    "name" : "suite",
+    "value" : "ru.api.tests.UserCreationTest"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-GATO7BH"
+  }, {
+    "name" : "thread",
+    "value" : "2124@DESKTOP-GATO7BH.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "junit4"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "e46ed967edc45ace.json",
+  "parameterValues" : [ ]
+}

@@ -1,0 +1,62 @@
+{
+  "uid" : "2b1c58f98922d3a1",
+  "name" : "createOrderWithAuthorization",
+  "fullName" : "ru.api.tests.OrderCreationTest.createOrderWithAuthorization",
+  "historyId" : "fc1406b08d78b6807d2e8cc882f9f2a4",
+  "time" : {
+    "start" : 1740245914154,
+    "stop" : 1740245916742,
+    "duration" : 2588
+  },
+  "description" : "Создание заказа с авторизацией и с ингредиентами",
+  "descriptionHtml" : "<p>Создание заказа с авторизацией и с ингредиентами</p>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "ru.api.tests"
+  }, {
+    "name" : "testClass",
+    "value" : "ru.api.tests.OrderCreationTest"
+  }, {
+    "name" : "testMethod",
+    "value" : "createOrderWithAuthorization"
+  }, {
+    "name" : "suite",
+    "value" : "ru.api.tests.OrderCreationTest"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-GATO7BH"
+  }, {
+    "name" : "thread",
+    "value" : "2124@DESKTOP-GATO7BH.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "junit4"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "2b1c58f98922d3a1.json",
+  "parameterValues" : [ ]
+}

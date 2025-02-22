@@ -1,11 +1,10 @@
 package ru.api.tests;
 
+import edu.methods.SetUp;
 import io.qameta.allure.Description;
-import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import edu.methods.UserAndOrderMethods;
 import org.junit.After;
-import org.junit.Before;
 import org.junit.Test;
 
 import static io.restassured.RestAssured.given;
@@ -17,10 +16,6 @@ public class UserCreationTest extends UserAndOrderMethods {
     private final UserAndOrderMethods userActions = new UserAndOrderMethods();
     protected String accessToken;
 
-    @Before
-    public void setUp() {
-        RestAssured.baseURI = "https://stellarburgers.nomoreparties.site";
-    }
 
     @After
     public void tearDown() {
@@ -30,6 +25,7 @@ public class UserCreationTest extends UserAndOrderMethods {
     @Test
     @Description("Создание уникального пользователя и удаление после проверки")
     public void creationUniqueUser() {
+        SetUp.setUp();
         String email = generateUniqueEmail();
         String password = generateUniquePassword();
         String name = generateUniqueName();
@@ -42,6 +38,7 @@ public class UserCreationTest extends UserAndOrderMethods {
     @Test
     @Description("Создание зарегистрированного пользователя и проверка на ошибку повторной регистрации")
     public void createExistingUser() {
+        SetUp.setUp();
         String email = generateUniqueEmail();
         String password = generateUniquePassword();
         String name = generateUniqueName();
@@ -55,6 +52,7 @@ public class UserCreationTest extends UserAndOrderMethods {
     @Test
     @Description("Создание пользователя без пароля и проверка на ошибку")
     public void createUserWithoutRequiredFieldPassword() {
+        SetUp.setUp();
         String email = generateUniqueEmail();
         String name = generateUniqueName();
         Response response = createUniqueUserWithoutPassword(email, name);
@@ -64,6 +62,7 @@ public class UserCreationTest extends UserAndOrderMethods {
     @Test
     @Description("Создание пользователя без email и проверка на ошибку")
     public void createUserWithoutRequiredFieldEmail() {
+        SetUp.setUp();
         String password = generateUniquePassword();
         String name = generateUniqueName();
         Response response = createUniqueUserWithoutEmail(password, name);
@@ -73,6 +72,7 @@ public class UserCreationTest extends UserAndOrderMethods {
     @Test
     @Description("Создание пользователя без имени и проверка на ошибку")
     public void createUserWithoutRequiredFieldName() {
+        SetUp.setUp();
         String password = generateUniquePassword();
         String email = generateUniqueEmail();
         Response response = createUniqueUserWithoutName(password, email);
